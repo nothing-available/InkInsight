@@ -25,7 +25,7 @@ export class AuthService {
             }
 
         } catch (error) {
-            throw error;
+            console.log("error creating account", error);
         }
     }
 
@@ -33,7 +33,7 @@ export class AuthService {
         try {
             return await this.account.createEmailSession(email, password);
         } catch (error) {
-            throw error;
+            console.log("error logging in", error);
         }
     }
 
